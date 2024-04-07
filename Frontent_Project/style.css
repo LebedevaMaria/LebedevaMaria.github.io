@@ -1,0 +1,125 @@
+.page {
+    background-color: #f2f2eb;
+    margin: 0;
+    padding: 0;
+    color: #092140;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 80%;
+    height: 10%;
+    margin: 10px auto 10px;
+  }
+  
+  .menu__link {
+    font-size: 18px;
+    text-decoration: none;
+    margin-right: 20px;
+    color: #092140;
+  }
+
+.short-information {
+    width: 80%;
+    height: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 25px auto 25px;
+    padding-bottom: 30px;
+    border-bottom: 3px solid #092140;
+}
+
+.short-information__image {
+    width: 100%;
+    border-radius: 60px;
+}
+
+.short-information-description{
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 200px;
+    border-radius: 50px;
+    background-color: #f27a5e;
+    margin: 25px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.education {
+    display: flex;
+    width: 80%;
+    height: 40%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 25px auto 25px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #092140;
+}
+
+.title {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 40px;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    font-size: 40px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 340px;
+    height: 200px;
+    border-radius: 50px;
+    background-color: #f27a5e;
+    margin: 10px;
+    text-align: center;
+    font-size: 20px;
+    justify-content: center;
+}
+
+.skills {
+    display: flex;
+    width: 80%;
+    height: 40%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 25px auto 25px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #092140;
+}
+
+.card-skills {
+    width: 400px;
+}
+
+.footer {
+    display: flex;
+    width: 80%;
+    height: 20%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding-bottom: 10px;
+}
+
+.footer__icon {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px auto 10px;
+    width: 20%;
+    align-items: center;
+}
+
