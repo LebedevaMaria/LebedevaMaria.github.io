@@ -154,7 +154,12 @@
 }
 
 .list {
+    display: flex;
+    flex-direction: column;
     text-align: left;
+    max-height: 240px;
+    justify-content: center;
+    padding-left: 30px;
 }
 
 .result {
