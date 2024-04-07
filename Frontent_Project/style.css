@@ -31,7 +31,12 @@
     justify-content: space-evenly;
     margin: 25px auto 25px;
     padding-bottom: 30px;
-    border-bottom: 3px solid #092140;
+    /*border-bottom: 3px solid #092140;*/
+}
+
+
+.short-information__text {
+    margin: 0;
 }
 
 .short-information__image {
@@ -77,7 +82,7 @@
     justify-content: center;
     margin: 25px auto 25px;
     padding-bottom: 10px;
-    border-bottom: 3px solid #092140;
+    /*border-bottom: 3px solid #092140;*/
 }
 
 .title {
@@ -118,11 +123,13 @@
     justify-content: center;
     margin: 25px auto 25px;
     padding-bottom: 10px;
-    border-bottom: 3px solid #092140;
+    /*border-bottom: 3px solid #092140;*/
 }
 
 .card-skills {
     width: 400px;
+    height: 240px;
+    padding: 10px auto 10px;
 }
 
 .footer {
@@ -146,3 +153,11 @@
     align-items: center;
 }
 
+.list {
+    text-align: left;
+}
+
+.result {
+    text-align: left;
+    padding-left: 25px;
+}
