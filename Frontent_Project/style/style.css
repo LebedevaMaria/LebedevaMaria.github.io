@@ -1,9 +1,38 @@
+@font-face {
+    src: url(https://code.s3.yandex.net/web-code/fonts/PTMono-Regular.woff);
+    font-family: 'PTMono';
+    font-style: normal;
+    font-weight: 400;
+  }
+  @font-face {
+    src: url(https://code.s3.yandex.net/web-code/fonts/Lora-Regular.woff);
+    font-family: 'Lora';
+    font-style: normal;
+    font-weight: 400;
+  }
+  @font-face {
+    src: url(https://code.s3.yandex.net/web-code/fonts/PlayfairDisplay-Bold.woff);
+    font-family: 'Playfair Display';
+    font-style: bold;
+    font-weight: 700;
+  }
+
 .page {
     background-color: #f2f2eb;
     margin: 0;
     padding: 0;
     color: #092140;
+    font-family: 'Lora'; 
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: 100%;
+    -ms-font-feature-settings: "kern" 1;
+    font-feature-settings: "kern";
 }
+
+
 
 .menu {
     display: flex;
@@ -13,6 +42,7 @@
     width: 80%;
     height: 10%;
     margin: 10px auto 10px;
+    font-family: 'PTMono';
   }
   
   .menu__link {
@@ -94,6 +124,7 @@
     justify-content: center;
     text-align: center;
     font-size: 40px;
+    font-family: 'Playfair Display';
 }
 
 .card {
@@ -166,3 +197,8 @@
     text-align: left;
     padding-left: 25px;
 }
+
+.list-olimpiads {
+    font-size: 18px;
+}
+
