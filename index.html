@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
     <head>
-        <meta charset="UTF-8">
+        <meta charset="UNF-8">
         <link rel="stylesheet" href="../Frontent_Project/style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="портфолио Мария Лебедева МФТИ">
@@ -12,10 +12,22 @@
     <body class="page">
         <header class="header">
             <nav class="menu">
-                <a href="#short-information" class="menu__link">Кто я</a>
-                <a href="#education" class="menu__link">Образование</a>
-                <a href="#skills" class="menu__link">Навыки и опыт</a>
-                <a href="#contacts" class="menu__link">Контакты</a>
+                    <div class="menu-text">
+                        <a href="#short-information" class="menu__link">Кто я</a>
+                    </div>
+                    <div class="menu-text">
+                        <a href="#education" class="menu__link">Образование</a>
+                    </div>
+                    <div class="menu-text">
+                        <a href="#skills" class="menu__link">О прошлом и настоящем</a>
+                    </div>
+                    <div class="menu-text">
+                        <a href="#gallery" class="menu__link">Галерея</a>
+                    </div>
+                    <div class="menu-text">
+                        <a href="#contacts" class="menu__link">Контакты</a>
+                    </div>
+                    
               </nav>
         </header>
         <main class="content">
@@ -24,15 +36,15 @@
                     <img class="short-information__image" src="../Frontent_Project/image/main_photo.jpg" alt="Здесь должно быть фото">
                 </picture>
                 <div class="short-information-description">
-                    <h1 class="short-information__title title">Лебедева Мария</h1>
+                    <h2 class="short-information__title title">Лебедева Мария</h2>
                     <p class="short-information__text text">Привет! Надо сюда будет что-то написать</p>
                 </div>
             </section>
             <div class="education-block">
                 <section class="education" id="education">
-                    <h1 class="education__title title">Образование</h1>
+                    <h2 class="education__title title">Образование</h2>
                     <div class="school card card-education">
-                        <p class="education-information text">ГОУ ЯО Средняя школа №33 <br> им. К. Маркса с углубленным изучением математики</p>
+                        <p class="education-information text">ГОУ ЯО Средняя школа №33 им. К. Маркса с углубленным изучением математики</p>
                     </div>
                     <div class="visiting-school card card-education">
                         <p class="education-information text">Образовательные программы по математике ОЦ "Сириус" и иных учебных лагерей</p>
@@ -44,33 +56,112 @@
             </div>
             
             <section class="skills" id="skills">
-                <h1 class="skills_title title">О прошлом и настоящем</h1>
-                <div class="olimpiads card-skills card">
-                    <p class="text">Призер и победитель региональных этапов ВСоШ и перечневых олимпиад</p>
-                </div>
-                <div class="exam card-skills card">
-                    <h2 class="result">Результаты сдачи ЕГЭ</h2>
-                    <ul class="list">
-                        <li class="text">Математика: 98 баллов</li>
-                        <li class="text">Информатика: 98 баллов</li>
-                    </ul>
-                </div>
-                <div class="experience card card-skills">
-                    <p class="experience-information text">Опыт работы учебным куратором по математике в онлайн-школе</p>
-                </div>
-                <div class="basketball card card-skills">
-                    <p class="experience-information text">Опыт общения с абсолютно разными по характеру людьми, который появился в процессе занятия баскетбольным судейством</p>
+                <h2 class="skills_title title">О прошлом и настоящем</h2>
+                <div class="skills-all">
+                    <div class="olimpiads card-skills card">
+                        <p class="text">Призер и победитель региональных этапов ВСоШ и перечневых олимпиад</p>
+                    </div>
+                    <div class="exam card-skills card">
+                        <p class="result text">Результаты сдачи ЕГЭ</p>
+                        <p class="text">Математика: 98 баллов <br> Информатика: 98 баллов</p>
+                    </div>
+                    <div class="experience card card-skills">
+                        <p class="experience-information text">Опыт работы учебным куратором по математике в онлайн-школе</p>
+                    </div>
+                    <div class="basketball card card-skills">
+                        <p class="experience-information text">Опыт общения с абсолютно разными по характеру людьми, который появился в процессе занятия баскетбольным судейством</p>
+                    </div>
                 </div>
             </section>
+            <section class="picture" id="gallery">
+                <ul class="picture__list">
+                    <li class="picture__card">
+                        <img class="picture__image" src="../Frontent_Project/image/1-1.jpg" alt="Здесь мое фото">
+                    </li>
+    
+                    <li class="picture__card">
+                        <img class="picture__image" src="../Frontent_Project/image/2-2.jpg" alt="Здесь мое фото">
+                    </li>
+    
+                    <li class="picture__card">
+                        <img class="picture__image" src="../Frontent_Project/image/3.jpg" alt="Здесь мое фото">
+                    </li>
+                </ul>
+            </section>
+            <section class="main-timer">
+                <div class="timer">
+                    <p class="timer-text">До окончания сессии осталось: </p>
+                    <div id="countdown"></div>
+                </div>
+                
+            </section>
         </main>
-        <footer class="footer" id="contacts">
+    
+    <footer class="footer" id="contacts">
+        <div>
+            <a class="footer__text">Feedback</a>
+        </div>
+        <div>
             <a href="https://t.me/Roachhhhhh">
                 <img  class="footer__icon" src="../Frontent_Project/image/telegram.png" alt="Загрузка..">
-                </a>
+              </a>
               <a href="https://vk.com/id318067167">
                 <img  class="footer__icon" src="../Frontent_Project/image/VK.png" alt="Загрузка..">
               </a>
-        </footer>
-    </body>
-</html> 
+        </div>
+        
+    </footer>
 
+    <div class="popup popup_gallery">
+        <div class="popup__block popup__block_gallery">
+            <button class="popup__close" type="button" aria-label="Close"></button>
+            <button class="popup__next-button" type="button" aria-label="Next image"></button>
+            <img class="popup__image" src="image/1-1.jpg" alt="Gallery image">
+            <button class="popup__prev-button" type="button" aria-label="Previous image"></button>
+        </div>
+    </div>
+
+    <div class="popup popup_contact">
+        <div class="popup__block">
+            <button class="popup__close-second" type="button" aria-label="Закрыть"></button>
+            <a href="https://your-url" class="github-corner" aria-label="View source on GitHub">
+                <svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+                    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+                    <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+                    <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path>
+                </svg></a>
+
+            <h2 class="popup__title">Обратная связь</h2>
+
+            <form class="popup__form" name="profile-edit" novalidate>
+                <fieldset class="popup__field">
+                    <input class="popup__input popup__input_email" type="email" name="email" placeholder="E-mail" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                    <p class="popup__error popup__error_email popup__error_disabled">Некорректный e-mail</p>
+
+                    <input class="popup__input popup__input_text" type="text" name="text" placeholder="Ваш вопрос" required pattern="[a-zA-Z0-9 .(),<>!?;:*%@]{5,100}">
+                    <p class="popup__error popup__error_text popup__error_disabled">Некорректное сообщение</p>
+                </fieldset>
+
+                <button class="popup__save popup__save_inactive" type="submit">Отправить</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="popup popup_time">
+        <div class="popup__block">
+            <button class="popup__close-second" type="button" aria-label="Закрыть"></button>
+            <div class="popup__block-time">
+                <div class="image-cat">
+                    <img class="picture__image picture__image-cat" src="image/cat.jpg" alt="Котик">
+                </div>
+                <div class="cat-text">
+                    <p class="popup__title popup__text-cat">Ты еще тут?</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="../Frontent_Project/main.js"></script>
+</body>
+</html> 
