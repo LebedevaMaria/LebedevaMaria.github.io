@@ -198,7 +198,7 @@ if (sessionStorage["popupWasClosed"] != 'yes') {
     setTimeout(function() {
         showPopup();
         sessionStorage["popupWasClosed"] = 'yes';
-    }, 1000);
+    }, 15000);
 }
 
 let popupTime = document.querySelector(".popup_time");
