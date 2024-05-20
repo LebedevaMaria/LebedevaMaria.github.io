@@ -77,15 +77,15 @@
             <section class="picture" id="gallery">
                 <ul class="picture__list">
                     <li class="picture__card">
-                        <img class="picture__image" src="../Frontent_Project/image/1-1.jpg" alt="Здесь мое фото">
+                        <img class="picture__image" src="./image/1-1.jpg" alt="Здесь мое фото">
                     </li>
     
                     <li class="picture__card">
-                        <img class="picture__image" src="../Frontent_Project/image/2-2.jpg" alt="Здесь мое фото">
+                        <img class="picture__image" src="./image/2-2.jpg" alt="Здесь мое фото">
                     </li>
     
                     <li class="picture__card">
-                        <img class="picture__image" src="../Frontent_Project/image/3.jpg" alt="Здесь мое фото">
+                        <img class="picture__image" src="image/3.jpg" alt="Здесь мое фото">
                     </li>
                 </ul>
             </section>
@@ -117,7 +117,7 @@
         <div class="popup__block popup__block_gallery">
             <button class="popup__close" type="button" aria-label="Close"></button>
             <button class="popup__next-button" type="button" aria-label="Next image"></button>
-            <img class="popup__image" src="../Frontent_Project/image/1-1.jpg" alt="Gallery image">
+            <img class="popup__image" src="image/1-1.jpg" alt="Gallery image">
             <button class="popup__prev-button" type="button" aria-label="Previous image"></button>
         </div>
     </div>
@@ -134,13 +134,13 @@
 
             <h2 class="popup__title">Обратная связь</h2>
 
-            <form class="popup__form" name="profile-edit" novalidate>
+            <form class="popup__form" name="profile-edit" id="popup-edit" novalidate>
                 <fieldset class="popup__field">
-                    <input class="popup__input popup__input_email" type="email" name="email" placeholder="E-mail" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
-                    <p class="popup__error popup__error_email popup__error_disabled">Некорректный e-mail</p>
+                    <input class="popup__input popup__input_email" type="email" name="email" placeholder="E-mail" required>
+                    <p class="popup__error popup__error_email popup__error_inactive">Некорректный e-mail</p>
 
-                    <input class="popup__input popup__input_text" type="text" name="text" placeholder="Ваш вопрос" required pattern="[a-zA-Z0-9 .(),<>!?;:*%@]{5,100}">
-                    <p class="popup__error popup__error_text popup__error_disabled">Некорректное сообщение</p>
+                    <input class="popup__input popup__input_text" type="text" name="text" placeholder="Ваш вопрос" required>
+                    <p class="popup__error popup__error_text popup__error_inactive">Некорректное сообщение</p>
                 </fieldset>
 
                 <button class="popup__save popup__save_inactive" type="submit">Отправить</button>
@@ -153,7 +153,7 @@
             <button class="popup__close-second" type="button" aria-label="Закрыть"></button>
             <div class="popup__block-time">
                 <div class="image-cat">
-                    <img class="picture__image picture__image-cat" src="../Frontent_Project/image/cat.jpg" alt="Котик">
+                    <img class="picture__image picture__image-cat" src="image/cat.jpg" alt="Котик">
                 </div>
                 <div class="cat-text">
                     <p class="popup__title popup__text-cat">Ты еще тут?</p>
@@ -166,3 +166,4 @@
     <script src="../Frontent_Project/main.js"></script>
 </body>
 </html> 
+
