@@ -128,6 +128,8 @@ let formInputText = formElement.querySelector(".popup__input_text");
 let formErrorEmail = formElement.querySelector(".popup__error_email");
 let formErrorText = formElement.querySelector(".popup__error_text");
 
+formSaveButton.setAttribute("disabled", true);
+
 popupContactContainer.addEventListener("click", function (evt) {
     evt.stopPropagation();
 })
@@ -149,14 +151,14 @@ popupContact.addEventListener("click", function() {
 })
 
 
-formSaveButton.addEventListener("click", function(evt) {
-    evt.preventDefault();
-    submitForm(formElement);
-})
+// formSaveButton.addEventListener("click", function(evt) {
+//     evt.preventDefault();
+//     submitForm(formElement);
+// })
 
 
 
-
+document.getElementById("popup-edit").reset();
 
 let showInputError = (elementInput, elementError) => {
     elementInput.classList.add("popup__input_error");
@@ -175,10 +177,18 @@ let correct = (elementInput, elementError) => {
 }
 
 function changeButton() {
-    if (formInputEmail.validity.valid && formInputText.validity.valid) {
+    if (formInputEmail.validity.valid && (formInputText.value.length >= 10)) {
         formSaveButton.classList.remove("popup__save_inactive");
+        formSaveButton.removeAttribute("disabled");
+        formSaveButton.addEventListener("click", function(evt) {
+            evt.preventDefault();
+            submitForm(formElement);
+
+        })
+        
     } else {
         formSaveButton.classList.add("popup__save_inactive");
+        
     }
 }
 
@@ -198,7 +208,7 @@ if (sessionStorage["popupWasClosed"] != 'yes') {
     setTimeout(function() {
         showPopup();
         sessionStorage["popupWasClosed"] = 'yes';
-    }, 15000);
+    }, 1000);
 }
 
 let popupTime = document.querySelector(".popup_time");
@@ -260,11 +270,11 @@ function submitForm(form) {
     body: ""
   }).then((response) => {
         if (response.ok) {
-          buttonForm.value = "Успешео отправлено";
+          buttonForm.value = "Успешно отправлено";
           buttonForm.classList.remove("loading");
           buttonForm.classList.add("success");
           document.body.style.cursor = 'default';
-          let inputList = Array.from(form.querySelectorAll());
+          let inputList = Array.from(form.querySelectorAll('.popup__input'));
           inputList.forEach(input => input.textContent='');
         } else {
           buttonForm.value = "Что-то пошло не так";
