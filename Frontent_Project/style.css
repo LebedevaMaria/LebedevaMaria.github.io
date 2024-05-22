@@ -40,6 +40,13 @@
     z-index: 1;
   }
 
+@media screen and (max-width: 662px){
+    .menu{
+        height: 100px;
+    }
+
+}
+
   .menu__link {
     font-size: 18px;
     text-decoration: none;
@@ -206,7 +213,7 @@
     justify-content: space-between;
 }
 
-.picture__image {
+.picture__image, .popup__cat {
     margin: 0;
     padding: 0;
     max-width: 80%;
@@ -342,6 +349,10 @@
 }
 
 .footer__text:active{
+    scale: 0.9;
+}
+
+.footer__text:hover{
     scale: 0.9;
 }
 
@@ -484,5 +495,6 @@
 
 
 .menu-text {
-    margin: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
