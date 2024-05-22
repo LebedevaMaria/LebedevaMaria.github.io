@@ -21,7 +21,18 @@ let popupGalleryClose = popupGallery.querySelector(".popup__close");
 let popupGalleryNext = popupGallery.querySelector(".popup__next-button");
 let popupGalleryPrev = popupGallery.querySelector(".popup__prev-button");
 
-let imageContainerArray = document.querySelectorAll(".picture__card");
+// let imageContainerArray = document.querySelectorAll(".picture__card");
+let imageContainerArray = document.querySelectorAll(".picture__image")
+let imageArray = [];
+for (let i = 0; i < imageContainerArray.length; i++){
+    imageArray.push(imageContainerArray[i].src);
+}
+
+imageArray.push("image/4-4.jpg");
+imageArray.push("image/5-5.jpg");
+// console.log(imageArray);
+let currentImage = 0;
+
 
 let currentImageContainer = document.querySelector(".picture__card");
 let currentImageLink = currentImageContainer.querySelector(".picture__image").src;
@@ -37,48 +48,84 @@ function closePopupGallery() {
 }
 
 function changeNext() {
-    let temp = currentImageContainer.nextElementSibling;
-    if (temp == null) {
+    // let temp = currentImageContainer.nextElementSibling;
+    // let temp = imageArray[currentImage];
+    // if (temp == null) {
+    //     return;
+    // }
+    // popupGalleryImage.src = temp;
+    // ++currentImage;
+    // currentImageLink = currentImageContainer.querySelector(".picture__image").src;
+    if (currentImage == (imageArray.length - 1)) {
         return;
     }
-    currentImageContainer = temp;
-    currentImageLink = currentImageContainer.querySelector(".picture__image").src;
+    ++currentImage;
+    popupGalleryImage.src = imageArray[currentImage];
 }
 
 function changePrev() {
-    let temp = currentImageContainer.previousElementSibling;
-    if (temp == null) {
+    // let temp = currentImageContainer.previousElementSibling;
+    // if (temp == null) {
+    //     return;
+    // }
+    // currentImageContainer = temp;
+    // currentImageLink = currentImageContainer.querySelector(".picture__image").src;
+    if (currentImage == 0) {
         return;
     }
-    currentImageContainer = temp;
-    currentImageLink = currentImageContainer.querySelector(".picture__image").src;
+    --currentImage;
+    popupGalleryImage.src = imageArray[currentImage];
 }
+    
 
 function changeNavigationButtons() {
-    let temp = currentImageContainer.previousElementSibling;
-    if (temp == null) {
+    // let temp = currentImageContainer.previousElementSibling;
+    // if (temp == null) {
+    //     popupGalleryPrev.classList.add("popup__prev-button_inactive");
+    // } else {
+    //     popupGalleryPrev.classList.remove("popup__prev-button_inactive");
+    // }
+    // temp = currentImageContainer.nextElementSibling;
+    // if (temp == null) {
+    //     popupGalleryNext.classList.add("popup__next-button_inactive");
+    // } else {
+    //     popupGalleryNext.classList.remove("popup__next-button_inactive");
+    // }
+    if (currentImage == 0) {
         popupGalleryPrev.classList.add("popup__prev-button_inactive");
     } else {
         popupGalleryPrev.classList.remove("popup__prev-button_inactive");
     }
-    temp = currentImageContainer.nextElementSibling;
-    if (temp == null) {
+    if (currentImage == imageArray.length - 1) {
         popupGalleryNext.classList.add("popup__next-button_inactive");
     } else {
         popupGalleryNext.classList.remove("popup__next-button_inactive");
     }
 }
 
-function setImage() {
-    popupGalleryImage.src = currentImageLink;
+function setImage(item) {
+    // console.log(item);
+    if (item.classList.contains('picture_1')) {
+        popupGalleryImage.src = imageArray[0];
+        currentImage = 0;
+    } else if (item.classList.contains('picture_2')) {
+        popupGalleryImage.src = imageArray[1];
+        currentImage = 1;
+    } else if (item.classList.contains('picture_3')){
+        popupGalleryImage.src = imageArray[2];
+        currentImage = 2;
+    } 
 }
 
 imageContainerArray.forEach(function (item) {
     item.addEventListener("click", function () {
-        console.log(item);
-        currentImageContainer = item;
-        currentImageLink = item.querySelector(".picture__image").src;
-        setImage();
+        // console.log(item);
+        // currentImageContainer = item;
+        // currentImageLink = item.querySelector(".picture__image").src;
+        // setImage(item.querySelector(".picture__image"));
+        // openPopupGallery();
+        // changeNavigationButtons();
+        setImage(item);
         openPopupGallery();
         changeNavigationButtons();
     })
@@ -86,14 +133,14 @@ imageContainerArray.forEach(function (item) {
 
 popupGalleryNext.addEventListener("click", function (evt) {
     changeNext();
-    setImage();
+    // setImage();
     changeNavigationButtons();
     evt.stopPropagation();
 })
 
 popupGalleryPrev.addEventListener("click", function (evt) {
     changePrev();
-    setImage();
+    // setImage();
     changeNavigationButtons();
     evt.stopPropagation();
 })
@@ -108,7 +155,7 @@ popupGallery.addEventListener("click", function (evt) {
     evt.stopPropagation();
 })
 
-console.log("Подключено");
+// console.log("Подключено");
 
 
 
@@ -208,7 +255,7 @@ if (sessionStorage["popupWasClosed"] != 'yes') {
     setTimeout(function() {
         showPopup();
         sessionStorage["popupWasClosed"] = 'yes';
-    }, 15000);
+    }, 1000);
 }
 
 let popupTime = document.querySelector(".popup_time");
