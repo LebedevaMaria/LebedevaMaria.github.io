@@ -28,8 +28,8 @@ for (let i = 0; i < imageContainerArray.length; i++){
     imageArray.push(imageContainerArray[i].src);
 }
 
-imageArray.push("Frontent_Project/image/4-4.jpg");
-imageArray.push("Frontent_Project/image/5-5.jpg");
+imageArray.push("../Frontent_Project/image/4-4.jpg");
+imageArray.push("../Frontent_Project/image/5-5.jpg");
 // console.log(imageArray);
 let currentImage = 0;
 
